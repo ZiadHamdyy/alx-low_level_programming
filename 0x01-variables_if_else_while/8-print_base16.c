@@ -7,7 +7,8 @@
 int main(void)
 {
 	int i = 0;
-	char ch ='a';
+	char ch = 'a';
+
 	while (i < 10)
 	{
 		putchar(i + '0');
