@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _len - length of string.
- * @i;the string.
+ * @s;the string.
  * Return:the length.
  */
 int _len(char *s)
@@ -23,7 +23,7 @@ void rev_string(char *s)
 	int i = _len(s), j = 0, last = i - 1;
 	char a;
 
-	while (j < i/2)
+	while (j < i / 2)
 	{
 		a = s[j];
 		s[j] = s[last];
