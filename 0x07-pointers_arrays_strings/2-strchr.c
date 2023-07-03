@@ -2,8 +2,8 @@
 #include <stddef.h>
 /**
  * _strchr - locates a character in a string.
- * @s:
- * @c:
+ * @s:the string.
+ * @c:the char that we will compare with.
  * Return: a pointer to the first occurrence of the character c in
  * the string s, or NULL if the character is not found.
  */
