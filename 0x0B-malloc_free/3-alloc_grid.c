@@ -2,6 +2,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
+ *alloc_grid - returns a pointer to a 2 dimensional array of integers.
+ *@width:the number of rows.
+ *@height:the number of column.
+ *Return:returns a pointer to a 2 dimensional array of integers.
+ *NULL on failure.
+ *If width or height is 0 or negative, return NULL.
  */
 int **alloc_grid(int width, int height)
 {
@@ -27,7 +33,7 @@ int **alloc_grid(int width, int height)
 			free(mat);
 			return (NULL);
 		}
-		for (j = 0; j < width ;j++)
+		for (j = 0; j < width; j++)
 		{
 			mat[i][j] = 0;
 		}
