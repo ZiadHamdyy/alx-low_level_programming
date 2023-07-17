@@ -1,6 +1,10 @@
+#ifndef MY_HEADER_FILE_H
+#define MY_HEADER_FILE_H
 struct dog
 {
-	char* name;
+	char *name;
 	float age;
-	char* owner;
+	char *owner;
 };
+
+#endif
