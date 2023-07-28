@@ -10,6 +10,7 @@
 void free_list(list_t *head)
 {
 	list_t *n, *nn;
+
 	if (!head)
 		return;
 	n = head;
