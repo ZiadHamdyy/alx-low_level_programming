@@ -1,2 +1,6 @@
 #!/bin/bash
+<<<<<<< HEAD
 gcc $CFILE -E -o c
+=======
+gcc $CFILE -o c
+>>>>>>> e68dc2c (task 1)
