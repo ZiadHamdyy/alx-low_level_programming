@@ -1,25 +1,29 @@
 #include "lists.h"
 /**
- * add_dnodeint - ..............
+ * add_dnodeint_end - ..............
  * @head:the header.
  * @n:the number
  * Return:the address of the new node or NULL is if failed
  */
-dlistint_t *add_dnodeint(dlistint_t **head, const int n)
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 	dlistint_t *ptr = malloc(sizeof(dlistint_t));
+	dlistint_t *ptr2 = *head;
 
 	if (ptr == NULL)
 		return (NULL);
 	ptr->n = n;
+
 	if (*head == NULL)
 	{
 		*head = ptr;
 		return (ptr);
 	}
-	ptr->next = *head;
-	ptr->prev = NULL;
-	(*head)->prev = ptr;
-	*head = ptr;
+	while (ptr2->next != NULL)
+		ptr2 = ptr2->next;
+
+	ptr->prev = ptr2;
+	ptr->next = NULL;
+	ptr2->next = ptr;
 	return (ptr);
 }
