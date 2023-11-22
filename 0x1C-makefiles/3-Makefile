@@ -1,0 +1,14 @@
+CC = gcc
+NAME = school
+OBJ = $(SRC:.c=.o)
+SRC = main.c school.c
+RM := rm -f
+all: $(OBJ)
+	$(CC) $(SRC) -o $(NAME)
+clean:
+	$(RM) *- $(NAME)
+oclean:
+	$(RM) $(OBJ)
+
+fclean: clean oclean
+	$(RM) $(NAME)
