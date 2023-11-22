@@ -4,7 +4,7 @@ OBJ = $(SRC:.c=.o)
 SRC = main.c school.c
 RM = rm -f
 
-all: $(OBJ)
+all: m.h $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 clean:
 	$(RM) *~ $(NAME)
@@ -12,7 +12,7 @@ clean:
 oclean:
 	$(RM) $(OBJ)
 
-fclean:
+fclean: clean oclean
 	$(RM) *~ $(NAME) $(OBJ)
 re: fclean all
 
